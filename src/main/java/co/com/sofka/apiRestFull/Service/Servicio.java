@@ -9,8 +9,10 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class Servicio {
+
     @Autowired
     Repositorio repositorio;
+
     public Mono<Dato> crear(Dato dato){
         return repositorio.save(dato);
     }
